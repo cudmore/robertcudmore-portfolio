@@ -13,7 +13,7 @@
   technologies: ["Python", "JavaScript", "PWA", "Desktop GUI"]
   featured: true
 
-- name: "Legacy Map Manager Igor"
+- name: "Map Manager - Igor"
   category: "Image Analysis"
   description: "Legacy (old) Map Manager Igor implementation"
   documentation: "https://mapmanager.github.io/"
@@ -33,18 +33,20 @@
 
 - name: "PiE"
   category: "Behavior"
-  description: "Desktop GUI for annotating behavior data in videos"
+  icon: "pie_fritzing.png"
+  description: "Raspberry Pi based behavior analysis system"
   github_repos:
     - name: "PiE"
       url: "https://github.com/cudmore/pie"
     - name: "PiE Analysis"
       url: "https://github.com/cudmore/pie-analysis"
   documentation: "https://cudmore.github.io/pie-doc/"
-  technologies: ["Python", "Desktop GUI", "Video Analysis"]
+  technologies: ["Raspberry Pi", "Python", "Video Analysis"]
   featured: true
 
 - name: "Brightest-Path-Lib"
   category: "Algorithms"
+  icon: "nbastar-v2.gif"
   description: "Library for path-finding algorithms in image analysis"
   github_repos:
     - name: "Brightest-Path-Lib"
