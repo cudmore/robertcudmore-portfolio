@@ -35,4 +35,4 @@ echo "📍 Site will be available at: http://localhost:4000"
 echo "🛑 Press Ctrl+C to stop the server"
 echo ""
 
-bundle exec jekyll serve --livereload
+bundle exec jekyll serve --livereload --force_polling
