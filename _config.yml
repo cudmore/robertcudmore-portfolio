@@ -1,6 +1,6 @@
 # Site settings
-title: "Research Software Portfolio"
-description: "Open-source software projects for biological research"
+title: "Robert Cudmore"
+description: "Open-source software for biological research"
 author: "Research Biologist"
 email: "robert.cudmore@gmail.com"
 baseurl: "" # the subpath of your site, e.g. /blog

@@ -1,108 +1,94 @@
 ---
 layout: default
 title: Home
-description: Open-source software projects for biological research
+description: Open-source software for biological research
 ---
 
 <!-- Hero Section -->
-<section class="hero-section bg-primary text-white py-5" style="margin-top: 76px;">
-    <div class="container">
+<section class="hero-section text-white py-5" 
+         style="background: url('{{ site.data.site.hero.background_image | prepend: "/assets/images/" | relative_url }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="container" style="padding-top: 76px;">
         <div class="row align-items-center">
-            <div class="col-lg-8">
-                <h1 class="display-4 fw-bold mb-4">Research Software Portfolio</h1>
-                <p class="lead mb-4">Open-source software tools for biological research, including image analysis, electrophysiology, and behavior analysis applications.</p>
-                <a href="#projects" class="btn btn-light btn-lg">
-                    <i class="bi bi-arrow-down me-2"></i>Explore Projects
-                </a>
-            </div>
-            <div class="col-lg-4 text-center">
-                <i class="bi bi-laptop display-1 opacity-75"></i>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- About Section -->
-<section id="about" class="py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-                <h2 class="mb-4">About This Portfolio</h2>
-                <p class="lead">I am a research biologist at a university, developing open-source software tools to advance biological research. This portfolio showcases various projects spanning image analysis, electrophysiology, and behavior analysis.</p>
-                <p>Each project is designed to be extensible and user-friendly, with comprehensive documentation and active development communities.</p>
+            <div class="col-lg-12 text-center">
+                <h1 class="display-4 fw-bold mb-4">{{ site.data.site.hero.title }}</h1>
+                <p class="lead mb-4">{{ site.data.site.about.lead }}</p>
+                <p class="mb-4">{{ site.data.site.about.description }}</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Projects Section -->
-<section id="projects" class="py-5 bg-light">
+<section id="projects" class="py-5 bg-body-secondary">
     <div class="container">
-        <h2 class="text-center mb-5">Featured Projects</h2>
-        
-        {% assign categories = site.data.projects | group_by: 'category' %}
-        {% for category in categories %}
-        <div class="mb-5">
-            <h3 class="mb-4">
-                <i class="bi bi-{% case category.name %}{% when 'Image Analysis' %}image{% when 'Electrophysiology' %}activity{% when 'Behavior' %}eye{% when 'Algorithms' %}cpu{% else %}code{% endcase %} me-2"></i>
-                {{ category.name }}
-            </h3>
-            <div class="row">
-                {% for project in category.items %}
-                {% if project.featured %}
-                <div class="col-lg-6 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                <i class="bi bi-{% if project.github_repos %}github{% else %}book{% endif %} me-2"></i>
-                                {{ project.name }}
-                            </h5>
-                            <p class="card-text">{{ project.description }}</p>
-                            
-                            <!-- Technologies -->
-                            <div class="mb-3">
-                                {% for tech in project.technologies %}
-                                <span class="badge bg-secondary me-1">{{ tech }}</span>
-                                {% endfor %}
-                            </div>
-                            
-                            <!-- Links -->
-                            <div class="d-flex flex-wrap gap-2">
-                                {% if project.github_repos %}
-                                    {% for repo in project.github_repos %}
-                                    <a href="{{ repo.url }}" target="_blank" class="btn btn-outline-primary btn-sm">
-                                        <i class="bi bi-github me-1"></i>{{ repo.name }}
-                                    </a>
-                                    {% endfor %}
-                                {% endif %}
-                                {% if project.documentation %}
-                                <a href="{{ project.documentation }}" target="_blank" class="btn btn-outline-info btn-sm">
-                                    <i class="bi bi-book me-1"></i>Documentation
-                                </a>
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {% endif %}
-                {% endfor %}
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-</section>
-
-<!-- All Projects Section -->
-<section class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-5">All Projects</h2>
         <div class="row">
             {% for project in site.data.projects %}
+            {% if project.featured %}
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-start mb-2">
-                            <h6 class="card-title mb-0">{{ project.name }}</h6>
+                            <div class="d-flex align-items-center">
+                                {% if project.icon %}
+                                <img src="{{ '/assets/images/icons/' | append: project.icon | relative_url }}" 
+                                     alt="{{ project.name }} icon" 
+                                     class="project-icon me-2">
+                                {% endif %}
+                                <h6 class="card-title mb-0">{{ project.name }}</h6>
+                            </div>
+                            <span class="badge bg-primary">{{ project.category }}</span>
+                        </div>
+                        <p class="card-text small">{{ project.description }}</p>
+                        
+                        <!-- Technologies -->
+                        <div class="mb-3">
+                            {% for tech in project.technologies %}
+                            <span class="badge bg-secondary me-1 small">{{ tech }}</span>
+                            {% endfor %}
+                        </div>
+                        
+                        <!-- Links -->
+                        <div class="d-flex flex-wrap gap-1">
+                            {% if project.github_repos %}
+                                {% for repo in project.github_repos %}
+                                <a href="{{ repo.url }}" target="_blank" class="btn btn-outline-primary btn-sm small">
+                                    <i class="bi bi-github me-1"></i>{{ repo.name }}
+                                </a>
+                                {% endfor %}
+                            {% endif %}
+                            {% if project.documentation %}
+                            <a href="{{ project.documentation }}" target="_blank" class="btn btn-outline-info btn-sm small">
+                                <i class="bi bi-book me-1"></i>Docs
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- All Projects Section -->
+<section class="py-5 bg-body-secondary">
+    <div class="container">
+        <div class="row">
+            {% for project in site.data.projects %}
+            {% if project.featured == false %}
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="d-flex align-items-center">
+                                {% if project.icon %}
+                                <img src="{{ '/assets/images/icons/' | append: project.icon | relative_url }}" 
+                                     alt="{{ project.name }} icon" 
+                                     class="project-icon me-2">
+                                {% endif %}
+                                <h6 class="card-title mb-0">{{ project.name }}</h6>
+                            </div>
                             <span class="badge bg-primary">{{ project.category }}</span>
                         </div>
                         <p class="card-text small">{{ project.description }}</p>
@@ -132,20 +118,25 @@ description: Open-source software projects for biological research
                     </div>
                 </div>
             </div>
+            {% endif %}
             {% endfor %}
         </div>
     </div>
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="py-5 bg-primary text-white">
+<section id="contact" class="py-5 bg-body-secondary text-white">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-                <h2 class="mb-4">Get In Touch</h2>
-                <p class="lead mb-4">Interested in collaborating or have questions about any of these projects?</p>
-                <a href="mailto:{{ site.email }}" class="btn btn-light btn-lg">
-                    <i class="bi bi-envelope me-2"></i>Contact Me
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <h2 class="mb-0">{{ site.data.site.contact.title }}</h2>
+            </div>
+            <div class="col-md-5">
+                <p class="mb-0">{{ site.data.site.contact.message }}</p>
+            </div>
+            <div class="col-md-3 text-md-end">
+                <a href="mailto:{{ site.email }}" class="text-light">
+                    <i class="bi bi-envelope me-2"></i>{{ site.email }}
                 </a>
             </div>
         </div>

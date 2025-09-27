@@ -1,5 +1,6 @@
 - name: "MapManager"
   category: "Image Analysis"
+  icon: "pymapmanager.png"
   description: "Modern version of Map Manager image analysis. Includes a PWA web GUI, desktop macos and windows GUIS, pure python computational backend."
   github_repos:
     - name: "WebMapManager"
@@ -21,6 +22,7 @@
 
 - name: "SanPy"
   category: "Electrophysiology"
+  icon: "sanpy-logo.png"
   description: "Desktop app for whole cell current clamp analysis. Provides an extensible plugin system to rapidly create file loaders and data visualizations"
   github_repos:
     - name: "SanPy"
