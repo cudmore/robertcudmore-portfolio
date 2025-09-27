@@ -1,0 +1,52 @@
+- name: "MapManager"
+  category: "Image Analysis"
+  description: "Modern version of Map Manager image analysis. Includes a PWA web GUI, desktop macos and windows GUIS, pure python computational backend."
+  github_repos:
+    - name: "WebMapManager"
+      url: "https://github.com/mapmanager/WebMapManager"
+    - name: "PyMapManager" 
+      url: "https://github.com/mapmanager/PyMapManager"
+    - name: "MapManagerCore"
+      url: "https://github.com/mapmanager/MapManagerCore"
+  documentation: "https://mapmanager.github.io/"
+  technologies: ["Python", "JavaScript", "PWA", "Desktop GUI"]
+  featured: true
+
+- name: "Legacy Map Manager Igor"
+  category: "Image Analysis"
+  description: "Legacy (old) Map Manager Igor implementation"
+  documentation: "https://mapmanager.github.io/"
+  technologies: ["Igor Pro"]
+  featured: false
+
+- name: "SanPy"
+  category: "Electrophysiology"
+  description: "Desktop app for whole cell current clamp analysis. Provides an extensible plugin system to rapidly create file loaders and data visualizations"
+  github_repos:
+    - name: "SanPy"
+      url: "https://github.com/cudmore/SanPy"
+  documentation: "https://cudmore.github.io/SanPy/"
+  technologies: ["Python", "Desktop GUI", "Plugin System"]
+  featured: true
+
+- name: "PiE"
+  category: "Behavior"
+  description: "Desktop GUI for annotating behavior data in videos"
+  github_repos:
+    - name: "PiE"
+      url: "https://github.com/cudmore/pie"
+    - name: "PiE Analysis"
+      url: "https://github.com/cudmore/pie-analysis"
+  documentation: "https://cudmore.github.io/pie-doc/"
+  technologies: ["Python", "Desktop GUI", "Video Analysis"]
+  featured: true
+
+- name: "Brightest-Path-Lib"
+  category: "Algorithms"
+  description: "Library for path-finding algorithms in image analysis"
+  github_repos:
+    - name: "Brightest-Path-Lib"
+      url: "https://github.com/mapmanager/brightest-path-lib"
+  documentation: "https://mapmanager.github.io/brightest-path-lib/"
+  technologies: ["Python", "Algorithms", "Image Processing"]
+  featured: true
