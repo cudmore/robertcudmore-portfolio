@@ -1,0 +1,18 @@
+# Site-wide content configuration
+# This file contains dynamic content that can be easily edited
+
+about:
+  title: ""
+  lead: "I am a research biologist, developing open-source software tools to advance biological research."
+  description: ""
+
+hero:
+  title: ""
+  subtitle: "Open-source software tools for biological research, including image analysis, electrophysiology, and behavior analysis."
+  button_text: "Explore Projects"
+  background_image: "vasculature1.png"
+
+contact:
+  title: "Get In Touch"
+  message: "Interested in collaborating or have questions about any of these projects?"
+  button_text: "Contact Me"
