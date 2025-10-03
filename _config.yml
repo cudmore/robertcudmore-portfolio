@@ -3,7 +3,8 @@ title: "Robert Cudmore"
 description: "Open-source software for biological research"
 author: "Research Biologist"
 email: "robert.cudmore@gmail.com"
-baseurl: "/robertcudmore-portfolio" # the subpath of your site, e.g. /blog
+#baseurl: "/robertcudmore-portfolio" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 
 # Build settings
