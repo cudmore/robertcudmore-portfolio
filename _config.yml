@@ -5,7 +5,7 @@ author: "Research Biologist"
 email: "robert.cudmore@gmail.com"
 #baseurl: "/robertcudmore-portfolio" # the subpath of your site, e.g. /blog
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+url: "https://cudmore.github.io" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
