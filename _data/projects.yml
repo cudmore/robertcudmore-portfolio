@@ -1,7 +1,12 @@
 - name: "MapManager"
   category: "Image Analysis"
   icon: "pymapmanager.png"
-  description: "Modern version of Map Manager image analysis. Includes a PWA web GUI, desktop macos and windows GUIS, pure python computational backend."
+  description: "Modern version of Map Manager image analysis. Includes a web GUI app, desktop macOs and Windows GUIS, and a pure python computational backend."
+  tech_stack:
+    - "JavaScript"
+    - "Web Assembly (pyodide)"
+    - "Desktop GUI"
+    - "Notebooks"
   github_repos:
     - name: "WebMapManager"
       url: "https://github.com/mapmanager/WebMapManager"
@@ -10,15 +15,8 @@
     - name: "MapManagerCore"
       url: "https://github.com/mapmanager/MapManagerCore"
   documentation: "https://mapmanager.github.io/"
-  technologies: ["Python", "JavaScript", "PWA", "Desktop GUI"]
+  technologies: ["JavaScript", "Web Assembly (pyodide)", "Desktop GUI", "Notebooks"]
   featured: true
-
-- name: "Map Manager - Igor"
-  category: "Image Analysis"
-  description: "Legacy (old) Map Manager Igor implementation"
-  documentation: "https://mapmanager.github.io/"
-  technologies: ["Igor Pro"]
-  featured: false
 
 - name: "SanPy"
   category: "Electrophysiology"
@@ -34,7 +32,7 @@
 - name: "PiE"
   category: "Behavior"
   icon: "pie_fritzing.png"
-  description: "Raspberry Pi based behavior analysis system"
+  description: "Raspberry Pi home-cage behavioral analysis"
   github_repos:
     - name: "PiE"
       url: "https://github.com/cudmore/pie"
@@ -54,3 +52,17 @@
   documentation: "https://mapmanager.github.io/brightest-path-lib/"
   technologies: ["Python", "Algorithms", "Image Processing"]
   featured: true
+
+- name: "Map Manager - Igor"
+  category: "Image Analysis"
+  description: "Legacy (old) Map Manager Igor implementation"
+  documentation: "https://mapmanager.github.io/"
+  technologies: ["Igor Pro"]
+  featured: false
+
+- name: "Coming Soon"
+  category: "TBD"
+  description: "Exciting new project coming soon!"
+  technologies: ["Coming Soon"]
+  featured: false
+
