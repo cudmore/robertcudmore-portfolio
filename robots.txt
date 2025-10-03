@@ -1,1 +1,1 @@
-Sitemap: /robertcudmore-portfolio/sitemap.xml
+Sitemap: /sitemap.xml

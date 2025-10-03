@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>/robertcudmore-portfolio/</loc>
+<loc>/</loc>
 </url>
 <url>
-<loc>/robertcudmore-portfolio/THEME_COMPARISON/</loc>
+<loc>/THEME_COMPARISON/</loc>
 </url>
 <url>
-<loc>/robertcudmore-portfolio/notes/software/</loc>
+<loc>/notes/software/</loc>
 </url>
 </urlset>
